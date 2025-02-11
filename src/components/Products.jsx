@@ -1,14 +1,12 @@
 import React from "react";
+import Card from "./Card";
 
 const Products = () => {
   return (
-    <div className="col-span-4 md:col-span-3 grid grid-cols-3 gap-2 p-2 bg-slate-500 rounded-md">
-      <h1 className="bg-emerald-400">first</h1>
-      <h1 className="bg-emerald-400">second</h1>
-      <h1 className="bg-emerald-400">third</h1>
-      <h1 className="bg-emerald-400">first</h1>
-      <h1 className="bg-emerald-400">second</h1>
-      <h1 className="bg-emerald-400">third</h1>
+    <div className="col-span-3 grid grid:col-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-2 rounded-md">
+      {Array.from({ length: 15 }, (_, index) => (
+        <Card key={index} />
+      ))}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import CalculateSection from "../components/CalculateSection";
 
 const HomePage = () => {
   return (
-    <div className="grid grid-cols-6 gap-4 p-4">
+    <div className="grid grid-cols-5 md:grid-cols-6 gap-4 p-4">
       <Options />
       <Products />
       <CalculateSection />
