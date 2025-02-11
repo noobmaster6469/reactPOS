@@ -28,7 +28,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="h-screen grid lg:grid-cols-2 lg:grid-cols-1">
+    <div className="h-screen grid lg:grid-cols-2">
       {/* Left Side - Form */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
@@ -40,14 +40,12 @@ const LoginPage = () => {
                 whileDrag={{
                   scale: 0.8,
                 }}
-                dragConstraints={
-                  {
-                    // left: 0,
-                    // right: 0,
-                    // top: 0,
-                    // bottom: 0,
-                  }
-                }
+                dragConstraints={{
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                }}
                 className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer"
               >
                 <Computer className="w-6 h-6 text-primary" />
@@ -140,10 +138,10 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side - Image/Pattern */}
-      {/* <LoginSignupPattern
+      <LoginSignupPattern
         title={"Welcome back!"}
         subtitle={"Sign in to continue where you left"}
-      /> */}
+      />
     </div>
   );
 };

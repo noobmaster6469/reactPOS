@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
-import {
-  Computer,
-  Eye,
-  EyeOff,
-  Loader2,
-  Lock,
-  Mail,
-  MessageSquare,
-  MessagesSquare,
-  User,
-} from "lucide-react";
+import { Computer, Eye, EyeOff, Loader2, Lock, Mail, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import LoginSignupPattern from "../components/loginSignupPattern";
@@ -45,7 +35,7 @@ const SignUpPage = () => {
     // if (success) signup(formData); //yet to implement
   };
   return (
-    <div className="min-h-screen grid lg:grid-cols-2 lg:grid-cols-1">
+    <div className="min-h-screen grid lg:grid-cols-2">
       {/* left side */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
@@ -57,14 +47,12 @@ const SignUpPage = () => {
                 whileDrag={{
                   scale: 0.8,
                 }}
-                dragConstraints={
-                  {
-                    // left: 0,
-                    // right: 0,
-                    // top: 0,
-                    // bottom: 0,
-                  }
-                }
+                dragConstraints={{
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                }}
                 className="size-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer"
               >
                 <Computer className="w-6 h-6 text-primary" />
@@ -176,10 +164,10 @@ const SignUpPage = () => {
 
       {/* right side */}
 
-      {/* <LoginSignupPattern
+      <LoginSignupPattern
         title="Get started"
         subtitle="Be ready for this amazing journey"
-      /> */}
+      />
     </div>
   );
 };

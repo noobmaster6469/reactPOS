@@ -1,7 +1,16 @@
 import React from "react";
+import Options from "../components/Options";
+import Products from "../components/Products";
+import CalculateSection from "../components/CalculateSection";
 
 const HomePage = () => {
-  return <div className="h-screen bg-base">HomePage</div>;
+  return (
+    <div className="grid grid-cols-6 gap-4 p-4">
+      <Options />
+      <Products />
+      <CalculateSection />
+    </div>
+  );
 };
 
 export default HomePage;
